@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'DINOT-Regular';
+    src: url(./assets/fonts/DINOT-Regular.ttf);
+}
+@font-face {
+    font-family: 'DINOT-Bold';
+    src: url(./assets/fonts/DINOT-Bold.otf);
+}
+@font-face {
+    font-family: 'DINOT-Light';
+    src: url(./assets/fonts/DINOT-Light.otf);
+}
+h1{
+    font-family: 'DINOT-Bold';
+    font-size: clamp(1.2em, 1vw, 1.5em);
+    color: #20556B;
+}
+body{
+    margin: 0;
+}
+.contenedor-principal{
+    display: flex;  
+    height: 100vh;
+    overflow: hidden;
+}
+.contenedor-img{
+    width: 50vw;
+}
+.contenedor-img > img{
+    object-fit: cover;
+    height: 100vh;
+    width: 50vw;
+    object-position:right;
+}
+.contenedor-form{
+    display: grid;
+    align-items: center;
+    margin: auto;
+    justify-items: center;
+    width: 40vw;
+}
+.img-logo{
+    width: clamp(8vw,2vw,10vw);
+}
+.grupo-titulo{
+    display: grid;
+    justify-items: center;
+}
+.form-login{
+    height: 30vh;
+    display: grid;
+    font-family: 'DINOT-Regular';
+    font-size: clamp(0.8em,1vw,1em);
+    color: #303030;
+    align-items: center;
+}
+.contenedor-input{
+    display: grid;
+    align-items: center;
+}
+.fuente-recuperar{
+    font-family: 'DINOT-BOLD';
+    color: #20556B;
+    font-size: clamp(0.6rem, 1vw, 0.7rem);
+    text-align: right;
+    cursor: pointer;
+}
+.btn-acceso{
+    height: clamp(5vh,2vh,6vh);
+    display: grid;
+    align-items: center;
+    background-color: #6B2B2B;
+    border-radius: 0.3em;
+    color: #F0F0F0;
+    cursor: pointer;
+    border: 0px solid;
+    font-family: 'DINOT-BOLD';
+    font-size: clamp(1em,1vw,1.5em);
+}
+.btn-acceso:hover{
+    background-color: #753232;
+}

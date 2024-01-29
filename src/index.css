@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'DINOT-Regular';
+    src: url(./assets/fonts/DINOT-Regular.ttf);
+}
+@font-face {
+    font-family: 'DINOT-Bold';
+    src: url(./assets/fonts/DINOT-Bold.otf);
+}
+@font-face {
+    font-family: 'DINOT-Light';
+    src: url(./assets/fonts/DINOT-Light.otf);
+}
+body{
+    font-family: 'DINOT-Regular';
+}

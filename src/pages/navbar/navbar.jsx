@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import logo from "../../assets/images/logo.png"
 import logoBlanco from "../../assets/images/logo-blanco.png"
+import "./navbar.css";
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -33,21 +34,26 @@ const Navbar = () => {
   };
 
   return (
-    <div className='flex justify-between items-center h-24 mx-auto px-4 text-white'>
+    <div className='flex justify-between items-center mx-auto px-4 text-white contenedor-header-nav bg-[#20556B] sm:bg-[#ffffff]'>
         <a href="">
-            <img className="h-20" src={logo} alt="Inicio" />
+            <img className="h-20 hidden sm:block" src={logo} alt="Inicio" />
+            <img className="h-16 sm:hidden" src={logoBlanco} alt="Inicio" />
         </a>
         
       <ul className='hidden md:flex'>
         {navItems.map(item => (
           <li
             key={item.id}
-            className='text-black p-4 hover: m-2 cursor-pointer duration-300'
+            className='text-black p-4 hover: m-2 cursor-pointer'
           >
             {itemSeleccionado(item)}
           </li>
         ))}
       </ul>
+      
+      <h1 className="sm:hidden text-2xl">
+          Inspección de daños
+      </h1>
 
       <div onClick={handleNav} className='block md:hidden'>
         <button type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden" aria-controls="mobile-menu-2" aria-expanded="false">
@@ -58,8 +64,8 @@ const Navbar = () => {
       <ul
         className={
           nav
-            ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#303030] ease-in-out duration-500'
-            : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
+            ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#303030] ease-in-out duration-500 z-10'
+            : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%] z-10'
         }
       >
         <div className="flex justify-center my-4">
